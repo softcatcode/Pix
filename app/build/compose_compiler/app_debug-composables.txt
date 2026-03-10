@@ -1,0 +1,122 @@
+fun getApplicationComponent()
+fun getPictureViewComponent(
+  stable picture: Picture
+): PictureViewComponent
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun FlickrNavigationHost()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun PictureViewContent(
+  stable picture: Picture
+  stable paddings: PaddingValues
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun PictureViewScreen(
+  stable initialPicture: Picture
+  stable paddings: PaddingValues
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun LoadingContent()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun ErrorContent(
+  stable message: String? = @static "Default error message"
+  stable onRetry: Function0<Unit>? = @static $composer.startReplaceGroup(1849434622)
+sourceInformation($composer, "CC(remember):PictureGridScreenContent.kt#9igjgp")
+val tmp0_group = $composer.cache(false) {
+  {
+
+  }
+
+}
+
+$composer.endReplaceGroup()
+tmp0_group@com.example.pix.presentation.picturesGrid.ErrorContent
+  stable paddings: PaddingValues? = @static PaddingValues(0.dp)
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun PicturesContent(
+  unstable pictures: List<Picture>? = @static listOf()
+  stable nextLoading: Boolean = @static true
+  stable errorMessage: String? = @static "Default error message"
+  stable onLoadNext: Function0<Unit>? = @static $composer.startReplaceGroup(1849434622)
+sourceInformation($composer, "CC(remember):PictureGridScreenContent.kt#9igjgp")
+val tmp0_group = $composer.cache(false) {
+  {
+
+  }
+
+}
+
+$composer.endReplaceGroup()
+tmp0_group@com.example.pix.presentation.picturesGrid.PicturesContent
+  stable onPictureClick: Function1<Picture, Unit>? = @static $composer.startReplaceGroup(1849434622)
+sourceInformation($composer, "CC(remember):PictureGridScreenContent.kt#9igjgp")
+val tmp1_group = $composer.cache(false) {
+  {     it  :   Picture   ->
+
+  }
+
+}
+
+$composer.endReplaceGroup()
+tmp1_group@com.example.pix.presentation.picturesGrid.PicturesContent
+  stable paddings: PaddingValues? = @static PaddingValues(0.dp)
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun PictureGridScreenContent(
+  stable query: String
+  stable pictureNavigation: Function1<Picture, Unit>
+  stable paddings: PaddingValues
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun PictureGrid(
+  stable modifier: Modifier? = @static Companion
+  unstable pictures: List<Picture>? = @dynamic defaultPictureList
+  stable nextLoading: Boolean = @static true
+  stable onPictureClick: Function1<Picture, Unit>? = @static $composer.startReplaceGroup(1849434622)
+sourceInformation($composer, "CC(remember):PictureGrid.kt#9igjgp")
+val tmp0_group = $composer.cache(false) {
+  {     it  :   Picture   ->
+
+  }
+
+}
+
+$composer.endReplaceGroup()
+tmp0_group@com.example.pix.presentation.ui.elements.PictureGrid
+  stable onLoadNext: Function0<Unit>? = @static $composer.startReplaceGroup(1849434622)
+sourceInformation($composer, "CC(remember):PictureGrid.kt#9igjgp")
+val tmp1_group = $composer.cache(false) {
+  {
+
+  }
+
+}
+
+$composer.endReplaceGroup()
+tmp1_group@com.example.pix.presentation.ui.elements.PictureGrid
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable, [androidx.compose.ui.UiComposable]]") fun MainScaffold(
+  stable onBackPressed: Function0<Unit>? = @static $composer.startReplaceGroup(1849434622)
+sourceInformation($composer, "CC(remember):Scaffolds.kt#9igjgp")
+val tmp0_group = $composer.cache(false) {
+  {
+
+  }
+
+}
+
+$composer.endReplaceGroup()
+tmp0_group@com.example.pix.presentation.ui.elements.MainScaffold
+  stable content: Function3<PaddingValues, Composer, Int, Unit>
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun FlickrTopBar(
+  stable title: String? = @static "Flickr top bar"
+  stable onBackPressed: Function0<Unit>? = @static $composer.startReplaceGroup(1849434622)
+sourceInformation($composer, "CC(remember):TopBars.kt#9igjgp")
+val tmp0_group = $composer.cache(false) {
+  {
+
+  }
+
+}
+
+$composer.endReplaceGroup()
+tmp0_group@com.example.pix.presentation.ui.elements.FlickrTopBar
+)
+restartable skippable scheme("[0, [0]]") fun PixTheme(
+  stable darkTheme: Boolean = @dynamic isSystemInDarkTheme($composer, 0)
+  stable dynamicColor: Boolean = @static true
+  stable content: Function2<Composer, Int, Unit>
+)

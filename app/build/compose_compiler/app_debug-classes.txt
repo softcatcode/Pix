@@ -1,0 +1,133 @@
+unstable class PicturesApplication {
+  unstable val picturesComponent$delegate: Lazy<@[FlexibleNullability] PictureListComponent?>
+  <runtime stability> = Unstable
+}
+unstable class FlickrRetrofit {
+  stable val API_KEY_NAME: String
+  unstable val addApiKeyHttpClient: OkHttpClient
+  unstable val api: Lazy<@[FlexibleNullability] FlickrApi?>
+  <runtime stability> = Unstable
+}
+unstable class FlickrResult {
+  unstable val photos: PhotosDto?
+  stable val stat: String?
+  stable val code: Int?
+  stable val message: String?
+  <runtime stability> = Unstable
+}
+stable class PhotoDto {
+  stable val farm: Int
+  stable val id: String
+  stable val isfamily: Int
+  stable val isfriend: Int
+  stable val ispublic: Int
+  stable val owner: String
+  stable val secret: String
+  stable val server: String
+  stable val title: String
+  <runtime stability> = Stable
+}
+unstable class PhotosDto {
+  stable val page: Int
+  stable val pages: Int
+  stable val perpage: Int
+  unstable val photo: List<PhotoDto>
+  stable val total: Int
+  <runtime stability> = Unstable
+}
+runtime class FlickrRepository {
+  runtime val flickrApi: FlickrApi
+  <runtime stability> = Uncertain(FlickrApi)
+}
+unstable class PictureDatabase {
+  <runtime stability> = Unstable
+}
+stable class PictureDbo {
+  stable val id: String
+  stable val title: String
+  stable val url: String
+  stable val label: String
+  <runtime stability> = Stable
+}
+unstable class ViewModelFactory {
+  unstable val providers: @[JvmSuppressWildcards(suppress = <null>)] Map<Class<out ViewModel>, Provider<ViewModel>>
+  <runtime stability> = Unstable
+}
+unstable class $serializer {
+  unstable val descriptor: SerialDescriptor
+  <runtime stability> = Unstable
+}
+stable class Picture {
+  stable val url: String
+  stable val title: String
+  <runtime stability> = Stable
+}
+runtime class SearchPicturesUseCase {
+  runtime val repository: PicturesRepository
+  <runtime stability> = Uncertain(PicturesRepository)
+}
+runtime class TransformPictureSizeUseCase {
+  runtime val repository: PicturesRepository
+  <runtime stability> = Uncertain(PicturesRepository)
+}
+unstable class CustomNavTypes {
+  unstable val PictureNavType: NavType<Picture>
+  <runtime stability> = Unstable
+}
+unstable class $serializer {
+  unstable val descriptor: SerialDescriptor
+  <runtime stability> = Unstable
+}
+stable class PictureGrid {
+  stable val query: String
+  <runtime stability> = Stable
+}
+unstable class $serializer {
+  unstable val descriptor: SerialDescriptor
+  <runtime stability> = Unstable
+}
+stable class PictureView {
+  stable val picture: Picture
+  <runtime stability> = Stable
+}
+unstable class PictureViewModel {
+  stable val picture: Picture
+  runtime val transformPictureSizeUseCase: TransformPictureSizeUseCase
+  unstable val _state: MutableLiveData<PictureViewScreenState>
+  <runtime stability> = Unstable
+}
+stable class Initial {
+  <runtime stability> = Stable
+}
+stable class Content {
+  stable val picture: Picture
+  <runtime stability> = Stable
+}
+stable class Initial {
+  <runtime stability> = Stable
+}
+stable class Loading {
+  <runtime stability> = Stable
+}
+stable class Error {
+  stable val message: String
+  <runtime stability> = Stable
+}
+unstable class Content {
+  unstable val pictures: List<Picture>
+  stable val nextLoading: Boolean
+  stable val errorMessage: String?
+  <runtime stability> = Unstable
+}
+unstable class PictureListViewModel {
+  runtime val searchPicturesUseCase: SearchPicturesUseCase
+  unstable val _state: MutableLiveData<PictureGridScreenState>
+  stable var currentPage: Int
+  stable val perPageCount: Int
+  stable var query: String
+  stable val size: PictureSize
+  <runtime stability> = Unstable
+}
+unstable class MainActivity {
+  <runtime stability> = Unstable
+}
